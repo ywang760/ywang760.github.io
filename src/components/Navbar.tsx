@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { name: "About", route: "/" },
   { name: "Projects", route: "/projects" },
   { name: "Experiences", route: "/experiences" },
+  { name: "Resume", route: "/resume" },
 ];
 
 const Navbar = () => {
@@ -14,7 +15,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-white px-6 py-4 shadow">
+    <nav className="bg-white px-6 py-6 shadow">
       <div className="flex flex-col md:flex-row md:justify-between md:items-center">
         <div className="flex justify-between items-center">
           <div>
