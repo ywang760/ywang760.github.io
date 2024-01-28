@@ -3,7 +3,12 @@ import { IoMdMenu, IoMdClose } from "react-icons/io";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const NAV_ITEMS = [
+interface navItem {
+  name: string;
+  route: string;
+}
+
+const NAV_ITEMS: navItem[] = [
   { name: "About", route: "/" },
   { name: "Projects", route: "/projects" },
   { name: "Experiences", route: "/experiences" },
