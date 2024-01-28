@@ -43,7 +43,7 @@ export default function Home() {
       </div>
 
       {/* TODO: skills section for recruiting, pubs for research */}
-      <div className="flex md:px-20 px-2">
+      <div className="flex md:px-20 px-2 pb-80">
         <h2 className="text-2xl font-bold text-primary-600">Skills</h2>
       </div>
     </main>

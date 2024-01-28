@@ -7,7 +7,7 @@ const NAV_ITEMS = [
   { name: "About", route: "/" },
   { name: "Projects", route: "/projects" },
   { name: "Experiences", route: "/experiences" },
-  { name: "Resume", route: "/resume" },
+  { name: "Resume", route: "/resume.pdf" },
 ];
 
 const Navbar = () => {
@@ -43,19 +43,31 @@ const Navbar = () => {
             isOpen ? "block" : "hidden"
           } md:flex md:items-center md:space-x-6 mt-4 md:mt-0 space-y-2 md:space-y-0`}
         >
-          {NAV_ITEMS.map((item, idx) => (
-            <Link
-              key={idx}
-              href={item.route}
-              className={`text-base ${
-                pathname === item.route
-                  ? "text-primary-600 hover:text-primary-700"
-                  : "text-gray-600 hover:text-gray-700"
-              } block text-base`}
-            >
-              {item.name}
-            </Link>
-          ))}
+          {NAV_ITEMS.map((item, idx) =>
+            item.name === "Resume" ? (
+              <a
+                key={idx}
+                href={item.route}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-700 block text-base"
+              >
+                {item.name}
+              </a>
+            ) : (
+              <Link
+                key={idx}
+                href={item.route}
+                className={`text-base ${
+                  pathname === item.route
+                    ? "text-primary-600 hover:text-primary-700"
+                    : "text-gray-600 hover:text-gray-700"
+                } block text-base`}
+              >
+                {item.name}
+              </Link>
+            )
+          )}
         </div>
       </div>
     </nav>
