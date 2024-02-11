@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col md:mx-60 mx-8">
+    <>
       <div className="flex flex-col items-center text-center justify-center py-16 md:flex-row md:space-x-20 md:text-left">
         <div className="mb-20">
           <Image
@@ -46,6 +46,6 @@ export default function Home() {
       <div className="flex md:px-20 px-2 pb-80">
         <h2 className="text-2xl font-bold text-primary-600">Skills</h2>
       </div>
-    </main>
+    </>
   );
 }
