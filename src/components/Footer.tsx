@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-col mx-auto text-center py-4 bg-primary-600 sm:px-6 md:flex-row md:justify-between md:px-10">
       <p className="text-sm text-gray-200 my-auto">
-        © 2024 Yutong Wang. Last updated 1/27/2024.
+        © 2024 Yutong Wang. Last updated 2/11/2024.
       </p>
 
       <div className="flex justify-center space-x-4 mt-2">

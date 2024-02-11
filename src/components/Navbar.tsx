@@ -21,16 +21,18 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white px-6 py-6 shadow">
-      <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center min-h-[4vh]">
         <div className="flex justify-between items-center">
-          <div>
-            <Link
-              href="/"
-              className="text-2xl font-bold text-primary-600 lg:text-3xl hover:text-primary-700 "
-            >
-              Yutong Wang
-            </Link>
-          </div>
+          {pathname !== "/" && (
+            <div>
+              <Link
+                href="/"
+                className="text-2xl font-bold text-primary-600 lg:text-3xl hover:text-primary-700 "
+              >
+                Yutong Wang
+              </Link>
+            </div>
+          )}
           <div className="md:hidden">
             <button
               type="button"

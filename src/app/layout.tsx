@@ -2,7 +2,7 @@
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import type { Metadata } from "next";
-import "./globals.css";
+import "../styles/globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
@@ -22,10 +22,13 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <title>Yutong Wang</title>
+        {/* metadata */}
       </Head>
       <body className={inter.className}>
         <Navbar />
-        {children}
+        <main className="flex flex-col mx-8 md:mx-20 xl:mx-60 py-8">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
