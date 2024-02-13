@@ -24,9 +24,9 @@ export default function RootLayout({
         <title>Yutong Wang</title>
         {/* metadata */}
       </Head>
-      <body className={inter.className}>
+      <body className={`${inter.className} flex flex-col h-screen`}>
         <Navbar />
-        <main className="flex flex-col mx-8 md:mx-20 xl:mx-60 py-8">
+        <main className="flex flex-col px-8 md:px-20 xl:px-60 py-8 flex-grow overflow-auto">
           {children}
         </main>
         <Footer />

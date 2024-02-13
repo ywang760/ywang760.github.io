@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white px-6 py-6 shadow">
-      <div className="flex flex-col md:flex-row md:justify-between md:items-center min-h-[4vh]">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center min-h-[5vh]">
         <div className="flex justify-between items-center">
           {pathname !== "/" && (
             <div>
