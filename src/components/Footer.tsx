@@ -10,7 +10,7 @@ const Footer = () => {
 
       <div className="flex justify-center space-x-4 mt-2">
         <a
-          href="https://www.linkedin.com/in/your-linkedin-profile/"
+          href="https://www.linkedin.com/in/yutong-w-957636201/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-200"
@@ -18,7 +18,7 @@ const Footer = () => {
           <FaLinkedin size={24} />
         </a>
         <a
-          href="https://github.com/your-github-username"
+          href="https://github.com/ywang760"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-200"
