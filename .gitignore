@@ -35,7 +35,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Video masters: originals exceed GitHub's 100 MiB file limit. Keep them
-# locally and commit only the transcoded *-web.mp4 versions.
+# Video masters. These exceed GitHub's 100 MiB file limit, and anything under
+# public/ is copied into the exported site, so masters live outside public/
+# and only the transcoded *-web.mp4 versions are tracked and published.
+/media-masters/
 /public/media/*.mp4
 !/public/media/*-web.mp4
