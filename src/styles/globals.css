@@ -2,16 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --paper: 251 250 247;
+    --surface: 255 255 255;
+    --ink: 22 21 26;
+    --muted: 88 85 96;
+    --faint: 114 110 124;
+    --rule: 226 222 214;
+    --accent: 198 68 32;
+    --accent-soft: 253 237 231;
+    --grid: 22 21 26;
+    --grid-alpha: 0.055;
+  }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  background: url(/bg.jpg) no-repeat center center fixed;
-  background-size: cover;
-  opacity: 0.1;
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: 17 16 20;
+      --surface: 25 24 29;
+      --ink: 240 238 234;
+      --muted: 166 162 172;
+      --faint: 138 134 148;
+      --rule: 48 46 54;
+      --accent: 255 122 78;
+      --accent-soft: 48 30 24;
+      --grid: 255 255 255;
+      --grid-alpha: 0.05;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    background-image: radial-gradient(
+      rgb(var(--grid) / var(--grid-alpha)) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgb(var(--accent) / 0.22);
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* Link that draws its underline on hover, left to right. */
+  .link-draw {
+    @apply relative text-accent no-underline;
+    background-image: linear-gradient(rgb(var(--accent)), rgb(var(--accent)));
+    background-size: 0% 1.5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.28s cubic-bezier(0.2, 0.7, 0.3, 1);
+  }
+  .link-draw:hover {
+    background-size: 100% 1.5px;
+  }
+
+  .label {
+    @apply font-mono text-[0.7rem] uppercase tracking-[0.16em] text-faint;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
