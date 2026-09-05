@@ -40,27 +40,55 @@ function LinkRow({ pub }: { pub: Publication }) {
   );
 }
 
+const VIDEO = /\.(mp4|webm)$/i;
+
+function Figure({ pub, index }: { pub: Publication; index: number }) {
+  const base =
+    "relative aspect-video overflow-hidden rounded-md border border-rule bg-surface/60";
+
+  if (!pub.media) {
+    return (
+      <div className={base}>
+        <div className="flex h-full w-full items-center justify-center">
+          <span className="font-mono text-[0.68rem] text-faint">fig. {index + 1}</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (VIDEO.test(pub.media)) {
+    return (
+      <div className={base}>
+        <video
+          src={pub.media}
+          aria-label={pub.mediaAlt ?? pub.title}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="h-full w-full object-cover"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className={base}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={pub.media}
+        alt={pub.mediaAlt ?? pub.title}
+        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+      />
+    </div>
+  );
+}
+
 function Card({ pub, index }: { pub: Publication; index: number }) {
   return (
-    <article className="group grid gap-5 sm:grid-cols-[13rem_1fr]">
-      {/* Media slot. Until a clip exists it holds a labelled placeholder rather
-          than collapsing, so the layout is already the final layout. */}
-      <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-rule bg-surface/60 sm:aspect-[4/3]">
-        {pub.media ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={pub.media}
-            alt={pub.mediaAlt ?? pub.title}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center">
-            <span className="font-mono text-[0.68rem] text-faint">
-              fig. {index + 1}
-            </span>
-          </div>
-        )}
-      </div>
+    <article className="group grid gap-5 sm:grid-cols-[20rem_1fr]">
+      <Figure pub={pub} index={index} />
 
       <div className="space-y-2">
         <div className="flex items-baseline gap-2">

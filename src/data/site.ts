@@ -29,8 +29,7 @@ export const links = {
   github: "https://github.com/ywang760",
   x: "https://x.com/w13659760",
   linkedin: "https://www.linkedin.com/in/yutong-w-957636201/",
-  /** DEFERRED: paste the Google Scholar profile URL to surface the icon. */
-  scholar: "",
+  scholar: "https://scholar.google.com/citations?user=mFEAxA8AAAAJ&hl=en",
   /** DEFERRED: drop an updated CV at public/cv.pdf, then set this to "/cv.pdf". */
   cv: "",
 };
@@ -121,7 +120,10 @@ export const publications: Publication[] = [
     tldr: "A real-time MPC–CLF–CBF planner that keeps a fleet radio-connected in cluttered space, and pulls it back together when connectivity breaks. Flown on 8 nano-quadrotors.",
     arxiv: "https://arxiv.org/abs/2510.03504",
     code: "https://github.com/ywang760/mpc-clf-cbf",
-    // DEFERRED: site, video, media
+    media: "/media/connectivity-web.mp4",
+    mediaAlt:
+      "Long-exposure composite of eight nano-quadrotors traversing an obstacle field.",
+    // DEFERRED: site, video
     bibtex: `@inproceedings{wang2026connectivity,
   title     = {Connectivity Maintenance and Recovery for
                Multi-Robot Motion Planning},
@@ -140,7 +142,10 @@ export const publications: Publication[] = [
     year: "2025",
     tldr: "Splitting the workspace and replanning robots in parallel scales deadlock-free trajectory generation to 142 simulated robots and 24 Crazyflies.",
     arxiv: "https://arxiv.org/abs/2501.16743",
-    // DEFERRED: code, site, video, media
+    media: "/media/hierarchical-swarm-web.mp4",
+    mediaAlt:
+      "Long-exposure composite of 24 Crazyflies replanning through a shared workspace.",
+    // DEFERRED: code, site, video
     bibtex: `@article{pan2025hierarchical,
   title   = {Hierarchical Trajectory (Re)Planning for a Large Scale Swarm},
   author  = {Pan, Lishuo and Wang, Yutong and Ayanian, Nora},
