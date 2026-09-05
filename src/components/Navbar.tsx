@@ -12,7 +12,7 @@ const NAV_ITEMS: navItem[] = [
   { name: "About", route: "/" },
   { name: "Projects", route: "/projects" },
   { name: "Experiences", route: "/experiences" },
-  { name: "Resume", route: "/portfolio/resume.pdf" },
+  { name: "Resume", route: "/resume.pdf" },
 ];
 
 const Navbar = () => {

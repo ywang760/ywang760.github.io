@@ -44,7 +44,7 @@ export default function Home() {
       <div className="flex flex-col items-center lg:mt-8 lg:flex-row lg:space-x-20 lg:text-left space-y-6 lg:space-y-0">
         <div className="flex lg:w-1/3 flex-col lg:space-y-10 items-center px-20 lg:px-0">
           <Image
-            src="/portfolio/headshot3.jpg"
+            src="/headshot3.jpg"
             alt="Hero Image"
             className="rounded-full shadow-2xl"
             width={300}
