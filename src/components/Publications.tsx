@@ -42,7 +42,7 @@ function LinkRow({ pub }: { pub: Publication }) {
 
 const VIDEO = /\.(mp4|webm)$/i;
 
-function Figure({ pub, index }: { pub: Publication; index: number }) {
+function Figure({ pub }: { pub: Publication }) {
   const base =
     "relative aspect-video overflow-hidden rounded-md border border-rule bg-surface/60";
 
@@ -50,7 +50,9 @@ function Figure({ pub, index }: { pub: Publication; index: number }) {
     return (
       <div className={base}>
         <div className="flex h-full w-full items-center justify-center">
-          <span className="font-mono text-[0.68rem] text-faint">fig. {index + 1}</span>
+          <span className="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-faint">
+            coming soon
+          </span>
         </div>
       </div>
     );
@@ -88,7 +90,7 @@ function Figure({ pub, index }: { pub: Publication; index: number }) {
 function Card({ pub, index }: { pub: Publication; index: number }) {
   return (
     <article className="group grid gap-5 sm:grid-cols-[20rem_1fr]">
-      <Figure pub={pub} index={index} />
+      <Figure pub={pub} />
 
       <div className="space-y-2">
         <div className="flex items-baseline gap-2">
