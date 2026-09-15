@@ -17,7 +17,7 @@ function Authors({ authors }: { authors: string[] }) {
 function LinkRow({ pub }: { pub: Publication }) {
   const items = [
     { label: "arXiv", href: pub.arxiv },
-    { label: "site", href: pub.site },
+    { label: "website", href: pub.site },
     { label: "code", href: pub.code },
     { label: "video", href: pub.video },
   ].filter((i) => i.href);
