@@ -20,6 +20,8 @@ function LinkRow({ pub }: { pub: Publication }) {
     { label: "website", href: pub.site },
     { label: "code", href: pub.code },
     { label: "video", href: pub.video },
+    { label: "X thread", href: pub.xThread },
+    { label: "LinkedIn", href: pub.linkedinPost },
   ].filter((i) => i.href);
 
   return (

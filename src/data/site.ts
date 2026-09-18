@@ -64,6 +64,8 @@ export type Publication = {
   code?: string;
   site?: string;
   video?: string;
+  xThread?: string;
+  linkedinPost?: string;
   bibtex: string;
 };
 
@@ -98,6 +100,8 @@ export const publications: Publication[] = [
     arxiv: "https://arxiv.org/abs/2609.00641",
     site: "https://ambench.github.io/",
     code: "https://github.com/ambench/ambench",
+    xThread: "https://x.com/w13659760/status/2100969708388315150",
+    linkedinPost: "https://lnkd.in/p/evEtpR3T",
     // DEFERRED: full-length video link
     bibtex: `@inproceedings{wang2026ambench,
   title     = {AM-Bench: A Modular Simulation Suite and Benchmark for
