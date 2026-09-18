@@ -92,7 +92,7 @@ export const publications: Publication[] = [
     venue: "Conference on Robot Learning (CoRL)",
     year: "2026",
     tldr: "12 aerial manipulation tasks across underactuated, fully actuated, and overactuated robots — so you can tell whether the embodiment, the controller, or the policy is what failed.",
-    media: "/media/ambench-web.mp4",
+    media: "/media/ambench-v13-web.mp4",
     mediaAlt:
       "AM-Bench overview cut showing outdoor aerial peg insertion, the paper's system architecture, twelve simulated tasks, four robot embodiments, and a wind comparison.",
     arxiv: "https://arxiv.org/abs/2609.00641",
