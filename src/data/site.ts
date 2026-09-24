@@ -132,6 +132,7 @@ export const publications: Publication[] = [
     media: "/media/connectivity-web.mp4",
     mediaAlt:
       "Long-exposure composite of eight nano-quadrotors traversing an obstacle field.",
+    linkedinPost: "https://lnkd.in/p/eb4P6GvT",
     // DEFERRED: site, video
     bibtex: `@inproceedings{wang2026connectivity,
   title     = {Connectivity Maintenance and Recovery for
