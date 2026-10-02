@@ -8,7 +8,9 @@ served from GitHub Pages at <https://ywang760.github.io>.
 Push to `master`. That is the whole process: `.github/workflows/deploy.yml`
 builds the static export and publishes it to Pages. There is no other hosting,
 no Vercel project, and no manual publish step. Work in progress goes on a
-feature branch, which never triggers a deploy.
+feature branch, which never triggers a deploy. GitHub Pages needs this repo to
+stay public (or on a plan that supports private Pages), or the deploy step fails
+with a 422.
 
 ```bash
 npm run dev     # local dev server on :3000
