@@ -118,6 +118,12 @@ function Card({ pub, index }: { pub: Publication; index: number }) {
         <p className="font-mono text-[0.75rem] text-accent">
           {pub.venue} {pub.year}
         </p>
+        {pub.award && (
+          <p className="font-mono text-[0.75rem] font-semibold text-ink">
+            <span aria-hidden="true">🏆 </span>
+            {pub.award}
+          </p>
+        )}
         <p className="max-w-measure text-[0.9rem] leading-relaxed text-muted">
           {pub.tldr}
         </p>

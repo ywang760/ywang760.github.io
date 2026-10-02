@@ -41,6 +41,10 @@ export type NewsItem = { date: string; body: string };
  * markup, per src/components/RichText.tsx.
  */
 export const news: NewsItem[] = [
+  {
+    date: "Oct 2026",
+    body: "**Drone Soccer** won the *Best Methodology Paper Award* at the [IROS 2026 Sim2Real and Classical Control workshop](https://sim2realgap.github.io/sim2real-and-control-workshop-iros2026/).",
+  },
   { date: "Sep 2026", body: "**AM-Bench** accepted to CoRL 2026." },
   {
     date: "Jun 2026",
@@ -57,6 +61,8 @@ export type Publication = {
   venue: string;
   year: string;
   tldr: string;
+  /** Optional award line, shown as a highlighted badge under the venue. */
+  award?: string;
   /** DEFERRED: put a looping clip at public/media/<id>.gif (or .mp4) and set this. */
   media?: string;
   mediaAlt?: string;
@@ -73,6 +79,35 @@ export type Publication = {
 export const SELF = "Yutong Wang";
 
 export const publications: Publication[] = [
+  {
+    id: "drone-soccer",
+    title: "Drone Soccer: Learning to Manipulate with Multicopter Downwash",
+    authors: [
+      "Neelay Joglekar",
+      "Bavin Saravanan",
+      "Yutong Wang",
+      "Varun Kandiyappan",
+      "Junyi Geng",
+      "Sebastian Scherer",
+    ],
+    venue: "IROS 2026 Workshop on Sim2Real and Classical Control",
+    year: "2026",
+    award: "Best Methodology Paper Award",
+    tldr: "Instead of treating a multicopter's downwash as a disturbance, use it as a manipulation tool: an RL policy trained on a simplified downwash model dribbles a ball and transfers to the real world.",
+    media: "/media/drone-soccer.jpg",
+    mediaAlt:
+      "Composite of a quadrotor flying over a row of volleyballs, which it pushes along the floor with its propeller downwash.",
+    arxiv: "https://arxiv.org/abs/2609.38588",
+    bibtex: `@inproceedings{joglekar2026dronesoccer,
+  title     = {Drone Soccer: Learning to Manipulate with
+               Multicopter Downwash},
+  author    = {Joglekar, Neelay and Saravanan, Bavin and Wang, Yutong and
+               Kandiyappan, Varun and Geng, Junyi and Scherer, Sebastian},
+  booktitle = {IROS 2026 Workshop on Sim2Real and Classical Control},
+  year      = {2026},
+  note      = {arXiv:2609.38588}
+}`,
+  },
   {
     id: "am-bench",
     title:
