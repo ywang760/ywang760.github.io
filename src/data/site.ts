@@ -80,35 +80,6 @@ export const SELF = "Yutong Wang";
 
 export const publications: Publication[] = [
   {
-    id: "drone-soccer",
-    title: "Drone Soccer: Learning to Manipulate with Multicopter Downwash",
-    authors: [
-      "Neelay Joglekar",
-      "Bavin Saravanan",
-      "Yutong Wang",
-      "Varun Kandiyappan",
-      "Junyi Geng",
-      "Sebastian Scherer",
-    ],
-    venue: "IROS 2026 Workshop on Sim2Real and Classical Control",
-    year: "2026",
-    award: "Best Methodology Paper Award",
-    tldr: "Instead of treating a multicopter's downwash as a disturbance, use it as a manipulation tool: an RL policy trained on a simplified downwash model dribbles a ball and transfers to the real world.",
-    media: "/media/drone-soccer.jpg",
-    mediaAlt:
-      "Composite of a quadrotor flying over a row of volleyballs, which it pushes along the floor with its propeller downwash.",
-    arxiv: "https://arxiv.org/abs/2609.38588",
-    bibtex: `@inproceedings{joglekar2026dronesoccer,
-  title     = {Drone Soccer: Learning to Manipulate with
-               Multicopter Downwash},
-  author    = {Joglekar, Neelay and Saravanan, Bavin and Wang, Yutong and
-               Kandiyappan, Varun and Geng, Junyi and Scherer, Sebastian},
-  booktitle = {IROS 2026 Workshop on Sim2Real and Classical Control},
-  year      = {2026},
-  note      = {arXiv:2609.38588}
-}`,
-  },
-  {
     id: "am-bench",
     title:
       "AM-Bench: A Modular Simulation Suite and Benchmark for Aerial Manipulation Policy Learning",
@@ -147,6 +118,35 @@ export const publications: Publication[] = [
                Scherer, Sebastian and Geng, Junyi and Shi, Guanya},
   booktitle = {Conference on Robot Learning (CoRL)},
   year      = {2026}
+}`,
+  },
+  {
+    id: "drone-soccer",
+    title: "Drone Soccer: Learning to Manipulate with Multicopter Downwash",
+    authors: [
+      "Neelay Joglekar",
+      "Bavin Saravanan",
+      "Yutong Wang",
+      "Varun Kandiyappan",
+      "Junyi Geng",
+      "Sebastian Scherer",
+    ],
+    venue: "IROS 2026 Workshop on Sim2Real and Classical Control",
+    year: "2026",
+    award: "Best Methodology Paper Award",
+    tldr: "Instead of treating a multicopter's downwash as a disturbance, use it as a manipulation tool: an RL policy trained on a simplified downwash model dribbles a ball and transfers to the real world.",
+    media: "/media/drone-soccer.jpg",
+    mediaAlt:
+      "Composite of a quadrotor flying over a row of volleyballs, which it pushes along the floor with its propeller downwash.",
+    arxiv: "https://arxiv.org/abs/2609.38588",
+    bibtex: `@inproceedings{joglekar2026dronesoccer,
+  title     = {Drone Soccer: Learning to Manipulate with
+               Multicopter Downwash},
+  author    = {Joglekar, Neelay and Saravanan, Bavin and Wang, Yutong and
+               Kandiyappan, Varun and Geng, Junyi and Scherer, Sebastian},
+  booktitle = {IROS 2026 Workshop on Sim2Real and Classical Control},
+  year      = {2026},
+  note      = {arXiv:2609.38588}
 }`,
   },
   {
