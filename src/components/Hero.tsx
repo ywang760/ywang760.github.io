@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiGooglescholar } from "react-icons/si";
+import { GiCrossedSwords } from "react-icons/gi";
 import { profile, links } from "@/data/site";
 import RichText from "./RichText";
 
@@ -11,6 +12,7 @@ const social = [
   { href: links.github, label: "GitHub", Icon: FaGithub },
   { href: links.x, label: "X", Icon: FaXTwitter },
   { href: links.linkedin, label: "LinkedIn", Icon: FaLinkedin },
+  { href: links.hok, label: "Honor of Kings", Icon: GiCrossedSwords },
 ];
 
 export default function Hero() {

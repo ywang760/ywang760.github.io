@@ -30,6 +30,8 @@ export const links = {
   x: "https://x.com/w13659760",
   linkedin: "https://www.linkedin.com/in/yutong-w-957636201/",
   scholar: "https://scholar.google.com/citations?user=mFEAxA8AAAAJ&hl=en",
+  /** Honor of Kings profile screenshot, opens the image. */
+  hok: "/hok-profile.jpg",
   /** DEFERRED: drop an updated CV at public/cv.pdf, then set this to "/cv.pdf". */
   cv: "",
 };
