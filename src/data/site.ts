@@ -152,6 +152,45 @@ export const publications: Publication[] = [
 }`,
   },
   {
+    id: "fly-by-code",
+    title:
+      "Fly-by-Code: Embodied Coding Agents for Aerial Manipulation with Active Visual and Physical Feedback",
+    authors: [
+      "Jaewoo Lee",
+      "Jeongyeon Seo",
+      "Sihyun Cho",
+      "Gyeongrak Choe",
+      "Yutong Wang",
+      "Bavin Saravanan",
+      "Jia-Bin Huang",
+      "Furong Huang",
+      "Sebastian Scherer",
+      "Guanya Shi",
+      "H. Jin Kim",
+      "Seungjae Lee",
+      "Dongjae Lee",
+    ],
+    venue: "Under Review",
+    year: "2026",
+    tldr: "After each attempt, a coding agent writes its own diagnostic programs: View flies to new vantage points and Probe runs targeted physical tests, so it can find out why an aerial manipulation task failed and fix the task program.",
+    media: "/media/fly-by-code-web.mp4",
+    mediaAlt:
+      "Real-robot excerpts at five times speed: an aerial manipulator grasps a hammer and places it in a basket, opens cabinet doors, and delivers a bottle.",
+    site: "https://fly-by-code.github.io/",
+    // DEFERRED: arxiv, code (both listed as coming soon on the project site)
+    bibtex: `@misc{lee2026flybycode,
+  title  = {Fly-by-Code: Embodied Coding Agents for Aerial Manipulation
+            with Active Visual and Physical Feedback},
+  author = {Lee, Jaewoo and Seo, Jeongyeon and Cho, Sihyun and
+            Choe, Gyeongrak and Wang, Yutong and Saravanan, Bavin and
+            Huang, Jia-Bin and Huang, Furong and Scherer, Sebastian and
+            Shi, Guanya and Kim, H. Jin and Lee, Seungjae and
+            Lee, Dongjae},
+  year   = {2026},
+  note   = {Under review}
+}`,
+  },
+  {
     id: "connectivity",
     title: "Connectivity Maintenance and Recovery for Multi-Robot Motion Planning",
     authors: [

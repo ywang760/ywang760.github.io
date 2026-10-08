@@ -100,9 +100,9 @@ function Card({ pub, index }: { pub: Publication; index: number }) {
             {String(index + 1).padStart(2, "0")}
           </span>
           <h3 className="font-display text-[1.05rem] font-semibold leading-snug tracking-tight">
-            {pub.arxiv ? (
+            {pub.arxiv ?? pub.site ? (
               <a
-                href={pub.arxiv}
+                href={pub.arxiv ?? pub.site}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-draw !text-ink hover:!text-accent"
