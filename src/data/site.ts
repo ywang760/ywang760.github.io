@@ -176,8 +176,10 @@ export const publications: Publication[] = [
     media: "/media/fly-by-code-web.mp4",
     mediaAlt:
       "Real-robot excerpts at five times speed: an aerial manipulator grasps a hammer and places it in a basket, opens cabinet doors, and delivers a bottle.",
+    arxiv: "https://arxiv.org/abs/2610.12549",
     site: "https://fly-by-code.github.io/",
-    // DEFERRED: arxiv, code (both listed as coming soon on the project site)
+    xThread: "https://x.com/jaylee_0301/status/2109476878381965752",
+    // DEFERRED: code (listed as coming soon on the project site)
     bibtex: `@misc{lee2026flybycode,
   title  = {Fly-by-Code: Embodied Coding Agents for Aerial Manipulation
             with Active Visual and Physical Feedback},
@@ -187,6 +189,8 @@ export const publications: Publication[] = [
             Shi, Guanya and Kim, H. Jin and Lee, Seungjae and
             Lee, Dongjae},
   year   = {2026},
+  eprint = {2610.12549},
+  archivePrefix = {arXiv},
   note   = {Under review}
 }`,
   },
