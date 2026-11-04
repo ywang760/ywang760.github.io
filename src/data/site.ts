@@ -45,6 +45,10 @@ export type NewsItem = { date: string; body: string };
 export const news: NewsItem[] = [
   {
     date: "Nov 2026",
+    body: "**The Missing Integrator** accepted to *The UMI Arena* workshop at CoRL 2026.",
+  },
+  {
+    date: "Nov 2026",
     body: "**Fly-by-Code** accepted to [CoRL 2026 Late-Breaking Results](https://www.corl.org/).",
   },
   {
@@ -71,7 +75,9 @@ export type Publication = {
   award?: string;
   /** DEFERRED: put a looping clip at public/media/<id>.gif (or .mp4) and set this. */
   media?: string;
+  mediaPoster?: string;
   mediaAlt?: string;
+  paper?: string;
   arxiv?: string;
   code?: string;
   site?: string;
@@ -85,6 +91,47 @@ export type Publication = {
 export const SELF = "Yutong Wang";
 
 export const publications: Publication[] = [
+  {
+    id: "am-bench",
+    title:
+      "AM-Bench: A Modular Simulation Suite and Benchmark for Aerial Manipulation Policy Learning",
+    authors: [
+      "Yutong Wang",
+      "Dongjae Lee",
+      "Xiaofeng Guo",
+      "Yuanzhu Zhan",
+      "Yufei Jiang",
+      "Bavin Saravanan",
+      "Muqing Cao",
+      "Jia Xie",
+      "Chenyang Mao",
+      "Sebastian Scherer",
+      "Junyi Geng",
+      "Guanya Shi",
+    ],
+    venue: "Conference on Robot Learning (CoRL)",
+    year: "2026",
+    tldr: "12 aerial manipulation tasks across underactuated, fully actuated, and overactuated robots — so you can tell whether the embodiment, the controller, or the policy is what failed.",
+    media: "/media/ambench-v13-web.mp4",
+    mediaAlt:
+      "AM-Bench overview cut showing outdoor aerial peg insertion, the paper's system architecture, twelve simulated tasks, four robot embodiments, and a wind comparison.",
+    arxiv: "https://arxiv.org/abs/2609.00641",
+    site: "https://ambench.github.io/",
+    code: "https://github.com/ambench/ambench",
+    xThread: "https://x.com/w13659760/status/2100969708388315150",
+    linkedinPost: "https://lnkd.in/p/evEtpR3T",
+    // DEFERRED: full-length video link
+    bibtex: `@inproceedings{wang2026ambench,
+  title     = {AM-Bench: A Modular Simulation Suite and Benchmark for
+               Aerial Manipulation Policy Learning},
+  author    = {Wang, Yutong and Lee, Dongjae and Guo, Xiaofeng and
+               Zhan, Yuanzhu and Jiang, Yufei and Saravanan, Bavin and
+               Cao, Muqing and Xie, Jia and Mao, Chenyang and
+               Scherer, Sebastian and Geng, Junyi and Shi, Guanya},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2026}
+}`,
+  },
   {
     id: "fly-by-code",
     title:
@@ -129,43 +176,29 @@ export const publications: Publication[] = [
 }`,
   },
   {
-    id: "am-bench",
+    id: "the-missing-integrator",
     title:
-      "AM-Bench: A Modular Simulation Suite and Benchmark for Aerial Manipulation Policy Learning",
+      "The Missing Integrator: Executing Frozen UMI Policies on Imperfect Arms",
     authors: [
       "Yutong Wang",
-      "Dongjae Lee",
-      "Xiaofeng Guo",
-      "Yuanzhu Zhan",
-      "Yufei Jiang",
-      "Bavin Saravanan",
-      "Muqing Cao",
-      "Jia Xie",
-      "Chenyang Mao",
+      "Narek Harutyunyan",
       "Sebastian Scherer",
-      "Junyi Geng",
       "Guanya Shi",
     ],
-    venue: "Conference on Robot Learning (CoRL)",
+    venue: "CoRL Workshop: The UMI Arena",
     year: "2026",
-    tldr: "12 aerial manipulation tasks across underactuated, fully actuated, and overactuated robots — so you can tell whether the embodiment, the controller, or the policy is what failed.",
-    media: "/media/ambench-v13-web.mp4",
+    tldr: "A frozen UMI policy leaves integral action to execution: anchoring each action chunk at the measured pose repeatedly reintroduces steady tracking error, while anchoring at the commanded pose can cause windup.",
+    paper: "/papers/the-missing-integrator.pdf",
+    media: "/media/missing-integrator-web.mp4",
+    mediaPoster: "/media/missing-integrator-anchor.png",
     mediaAlt:
-      "AM-Bench overview cut showing outdoor aerial peg insertion, the paper's system architecture, twelve simulated tasks, four robot embodiments, and a wind comparison.",
-    arxiv: "https://arxiv.org/abs/2609.00641",
-    site: "https://ambench.github.io/",
-    code: "https://github.com/ambench/ambench",
-    xThread: "https://x.com/w13659760/status/2100969708388315150",
-    linkedinPost: "https://lnkd.in/p/evEtpR3T",
-    // DEFERRED: full-length video link
-    bibtex: `@inproceedings{wang2026ambench,
-  title     = {AM-Bench: A Modular Simulation Suite and Benchmark for
-               Aerial Manipulation Policy Learning},
-  author    = {Wang, Yutong and Lee, Dongjae and Guo, Xiaofeng and
-               Zhan, Yuanzhu and Jiang, Yufei and Saravanan, Bavin and
-               Cao, Muqing and Xie, Jia and Mao, Chenyang and
-               Scherer, Sebastian and Geng, Junyi and Shi, Guanya},
-  booktitle = {Conference on Robot Learning (CoRL)},
+      "Loop through Figures 3a, 1, 2a, 2c, and 3b: execution anchors, the execution pipeline, tracking error versus task success, command and controller fixes, and success versus anchor weight.",
+    bibtex: `@inproceedings{wang2026missingintegrator,
+  title     = {The Missing Integrator: Executing Frozen {UMI} Policies
+               on Imperfect Arms},
+  author    = {Wang, Yutong and Harutyunyan, Narek and
+               Scherer, Sebastian and Shi, Guanya},
+  booktitle = {The UMI Arena Workshop at the Conference on Robot Learning (CoRL)},
   year      = {2026}
 }`,
   },

@@ -16,6 +16,7 @@ function Authors({ authors }: { authors: string[] }) {
 
 function LinkRow({ pub }: { pub: Publication }) {
   const items = [
+    { label: "paper PDF", href: pub.paper },
     { label: "arXiv", href: pub.arxiv },
     { label: "website", href: pub.site },
     { label: "code", href: pub.code },
@@ -65,6 +66,7 @@ function Figure({ pub }: { pub: Publication }) {
       <div className={base}>
         <video
           src={pub.media}
+          poster={pub.mediaPoster}
           aria-label={pub.mediaAlt ?? pub.title}
           autoPlay
           loop
@@ -91,8 +93,10 @@ function Figure({ pub }: { pub: Publication }) {
 
 function Card({ pub, index }: { pub: Publication; index: number }) {
   return (
-    <article className="group grid gap-5 sm:grid-cols-[20rem_1fr]">
-      <Figure pub={pub} />
+    <article
+      className={`group grid gap-5 ${pub.media ? "sm:grid-cols-[20rem_1fr]" : ""}`}
+    >
+      {pub.media && <Figure pub={pub} />}
 
       <div className="space-y-2">
         <div className="flex items-baseline gap-2">
@@ -100,9 +104,9 @@ function Card({ pub, index }: { pub: Publication; index: number }) {
             {String(index + 1).padStart(2, "0")}
           </span>
           <h3 className="font-display text-[1.05rem] font-semibold leading-snug tracking-tight">
-            {pub.arxiv ?? pub.site ? (
+            {pub.paper ?? pub.arxiv ?? pub.site ? (
               <a
-                href={pub.arxiv ?? pub.site}
+                href={pub.paper ?? pub.arxiv ?? pub.site}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-draw !text-ink hover:!text-accent"
