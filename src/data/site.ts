@@ -14,7 +14,7 @@ export const profile = {
   photo: "/headshot.jpg",
   /** One-line thesis of the research. Refine as the narrative sharpens. */
   tagline:
-    "I work on making aerial robots reliable when they physically interact with the world.",
+    "I work on making robots reliable when they physically interact with the world.",
   /** Supports inline link, bold and italic markup; see src/components/RichText.tsx. */
   bio: [
     "I am a Master of Science in Robotics student at the [CMU Robotics Institute](https://www.ri.cmu.edu/), co-advised by [Guanya Shi](https://www.gshi.me/) and [Sebastian Scherer](https://theairlab.org/team/sebastian/) across the [LeCAR Lab](https://lecar-lab.github.io/) and the [AirLab](https://theairlab.org/). My research runs from multi-robot motion planning under connectivity and safety constraints to learning-based control for aerial manipulation.",
@@ -43,6 +43,10 @@ export type NewsItem = { date: string; body: string };
  * markup, per src/components/RichText.tsx.
  */
 export const news: NewsItem[] = [
+  {
+    date: "Nov 2026",
+    body: "**Fly-by-Code** accepted to [CoRL 2026 Late-Breaking Results](https://www.corl.org/).",
+  },
   {
     date: "Oct 2026",
     body: "**Drone Soccer** won the *Best Methodology Paper Award* at the [IROS 2026 Sim2Real and Classical Control workshop](https://sim2realgap.github.io/sim2real-and-control-workshop-iros2026/).",
@@ -81,6 +85,49 @@ export type Publication = {
 export const SELF = "Yutong Wang";
 
 export const publications: Publication[] = [
+  {
+    id: "fly-by-code",
+    title:
+      "Fly-by-Code: Embodied Coding Agents for Aerial Manipulation with Active Visual and Physical Feedback",
+    authors: [
+      "Jaewoo Lee",
+      "Jeongyeon Seo",
+      "Sihyun Cho",
+      "Gyeongrak Choe",
+      "Yutong Wang",
+      "Bavin Saravanan",
+      "Jia-Bin Huang",
+      "Furong Huang",
+      "Sebastian Scherer",
+      "Guanya Shi",
+      "H. Jin Kim",
+      "Seungjae Lee",
+      "Dongjae Lee",
+    ],
+    venue: "Conference on Robot Learning (CoRL), Late-Breaking Results",
+    year: "2026",
+    tldr: "After each attempt, a coding agent writes its own diagnostic programs: View flies to new vantage points and Probe runs targeted physical tests, so it can find out why an aerial manipulation task failed and fix the task program.",
+    media: "/media/fly-by-code-web.mp4",
+    mediaAlt:
+      "Real-robot excerpts at five times speed: an aerial manipulator grasps a hammer and places it in a basket, opens cabinet doors, and delivers a bottle.",
+    arxiv: "https://arxiv.org/abs/2610.12549",
+    site: "https://fly-by-code.github.io/",
+    xThread: "https://x.com/jaylee_0301/status/2109476878381965752",
+    // DEFERRED: code (listed as coming soon on the project site)
+    bibtex: `@misc{lee2026flybycode,
+  title  = {Fly-by-Code: Embodied Coding Agents for Aerial Manipulation
+            with Active Visual and Physical Feedback},
+  author = {Lee, Jaewoo and Seo, Jeongyeon and Cho, Sihyun and
+            Choe, Gyeongrak and Wang, Yutong and Saravanan, Bavin and
+            Huang, Jia-Bin and Huang, Furong and Scherer, Sebastian and
+            Shi, Guanya and Kim, H. Jin and Lee, Seungjae and
+            Lee, Dongjae},
+  year   = {2026},
+  eprint = {2610.12549},
+  archivePrefix = {arXiv},
+  note   = {Accepted to Conference on Robot Learning (CoRL), Late-Breaking Results}
+}`,
+  },
   {
     id: "am-bench",
     title:
@@ -149,49 +196,6 @@ export const publications: Publication[] = [
   booktitle = {IROS 2026 Workshop on Sim2Real and Classical Control},
   year      = {2026},
   note      = {arXiv:2609.38588}
-}`,
-  },
-  {
-    id: "fly-by-code",
-    title:
-      "Fly-by-Code: Embodied Coding Agents for Aerial Manipulation with Active Visual and Physical Feedback",
-    authors: [
-      "Jaewoo Lee",
-      "Jeongyeon Seo",
-      "Sihyun Cho",
-      "Gyeongrak Choe",
-      "Yutong Wang",
-      "Bavin Saravanan",
-      "Jia-Bin Huang",
-      "Furong Huang",
-      "Sebastian Scherer",
-      "Guanya Shi",
-      "H. Jin Kim",
-      "Seungjae Lee",
-      "Dongjae Lee",
-    ],
-    venue: "Under Review",
-    year: "2026",
-    tldr: "After each attempt, a coding agent writes its own diagnostic programs: View flies to new vantage points and Probe runs targeted physical tests, so it can find out why an aerial manipulation task failed and fix the task program.",
-    media: "/media/fly-by-code-web.mp4",
-    mediaAlt:
-      "Real-robot excerpts at five times speed: an aerial manipulator grasps a hammer and places it in a basket, opens cabinet doors, and delivers a bottle.",
-    arxiv: "https://arxiv.org/abs/2610.12549",
-    site: "https://fly-by-code.github.io/",
-    xThread: "https://x.com/jaylee_0301/status/2109476878381965752",
-    // DEFERRED: code (listed as coming soon on the project site)
-    bibtex: `@misc{lee2026flybycode,
-  title  = {Fly-by-Code: Embodied Coding Agents for Aerial Manipulation
-            with Active Visual and Physical Feedback},
-  author = {Lee, Jaewoo and Seo, Jeongyeon and Cho, Sihyun and
-            Choe, Gyeongrak and Wang, Yutong and Saravanan, Bavin and
-            Huang, Jia-Bin and Huang, Furong and Scherer, Sebastian and
-            Shi, Guanya and Kim, H. Jin and Lee, Seungjae and
-            Lee, Dongjae},
-  year   = {2026},
-  eprint = {2610.12549},
-  archivePrefix = {arXiv},
-  note   = {Under review}
 }`,
   },
   {
